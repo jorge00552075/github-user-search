@@ -1,0 +1,112 @@
+/* TABLET */
+@media (max-width: 768px) {
+  .container {
+    max-width: 603px;
+    padding: 15px;
+  }
+
+  .profile {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+
+  .profile-login {
+    margin-bottom: 8px;
+    margin-right: 96px;
+  }
+
+  .profile-header {
+    width: 100%;
+    /* text-align: center; */
+    transform: translateX(30%);
+  }
+
+  .profile-bio {
+    transform: translateX(-30%);
+  }
+
+  .image-container {
+    position: absolute;
+  }
+
+  .avatar {
+    position: absolute;
+    top: 24px;
+    left: 0;
+  }
+
+  .profile-joined-date {
+    position: static;
+    margin-bottom: 42px;
+  }
+
+  .stats-container {
+    width: 100%;
+    gap: 20%;
+  }
+}
+/* MOBILE */
+@media (max-width: 576px) {
+  .container {
+    max-width: 405px;
+  }
+
+  .search-input {
+    font-size: 13px;
+    padding: 12px 0;
+  }
+
+  .btn {
+    padding: 12px 16px;
+  }
+
+  .avatar {
+    height: 70px;
+  }
+
+  .profile-name {
+    font-size: 16px;
+  }
+
+  .profile-login {
+    font-size: 13px;
+  }
+
+  .profile-joined-date {
+    font-size: 13px;
+  }
+
+  .profile-bio {
+    font-size: 13px;
+    line-height: 1.9;
+  }
+
+  .stats-container {
+    gap: 15%;
+  }
+
+  .stat-box .stat-heading {
+    font-size: 12px;
+  }
+
+  .stat-box span {
+    font-size: 16px;
+  }
+
+  /* Social Links */
+  .social-links {
+    flex-direction: column;
+  }
+
+  .li {
+    width: 100%;
+    /* used for aligning li text */
+    display: grid;
+    grid-template-columns: 20px 1fr;
+  }
+
+  .link-text {
+    font-size: 13px;
+  }
+}

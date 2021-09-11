@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/queries.css" />
+
+    <title>GitHub user search app</title>
+  </head>
+  <body>
+    <div class="container">
+      <!-- HEADER COMPONENT -->
+      <header class="header" id="header">
+        <div class="app-name">devfinder</div>
+
+        <!-- Dark Mode Switch -->
+        <div class="theme-switch-wrapper">
+          <span class="theme-text">Dark</span>
+          <button class="theme-btn">
+            <img
+              src="./assets/icon-moon.svg"
+              alt="Moon icon"
+              class="theme-icon"
+            />
+          </button>
+        </div>
+      </header>
+
+      <!-- SEARCH COMPONENT -->
+      <form class="search-bar">
+        <label for="search-input">
+          <img
+            src="./assets/icon-search.svg"
+            alt="search icon"
+            class="icon-search"
+          />
+        </label>
+        <input
+          class="search-input"
+          type="text"
+          placeholder="Search GitHub username..."
+        />
+        <span class="err-message">No results</span>
+        <button class="btn" type="submit">Search</button>
+      </form>
+
+      <!-- PROFILE COMPONENT -->
+      <main class="profile">
+        <!-- profile avatar -->
+        <div class="image-container">
+          <img src="./assets/583231.png" alt="Avatar" class="avatar" />
+        </div>
+
+        <!-- profile information -->
+        <div class="profile-information">
+          <div class="profile-header">
+            <h1 class="profile-name">The Octocat</h1>
+            <h3 class="profile-login">@octocat</h3>
+            <p class="profile-joined-date">Joined 25 Jan 2011</p>
+            <p class="profile-bio">
+              Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec
+              odio. Quisque volutpat mattis eros.
+            </p>
+          </div>
+          <!-- repos / followers -->
+          <div class="stats-container">
+            <div class="stat-box">
+              <h4 class="stat-heading">Repos</h4>
+              <span class="public-repos">8</span>
+            </div>
+            <div class="stat-box">
+              <h4 class="stat-heading">Followers</h4>
+              <span class="followers">3938</span>
+            </div>
+            <div class="stat-box">
+              <h4 class="stat-heading">Following</h4>
+              <span class="following">9</span>
+            </div>
+          </div>
+
+          <!-- LIST ITEMS -->
+          <ul class="social-links">
+            <!-- LOCATION LI -->
+            <li class="li">
+              <img
+                src="./assets/icon-location.svg"
+                alt="location icon"
+                class="li-icon"
+              />
+              <span class="li-text location">San Francisco</span>
+            </li>
+            <!-- TWITTER LI -->
+            <li class="li">
+              <img
+                src="./assets/icon-twitter.svg"
+                alt="location icon"
+                class="li-icon"
+              />
+              <a
+                href="https://twitter.com"
+                target="_blank"
+                class="li-text twitter_username"
+                >Not Available
+              </a>
+            </li>
+            <!-- BLOG LI -->
+            <li class="li">
+              <img
+                src="./assets/icon-website.svg"
+                alt="location icon"
+                class="li-icon"
+              />
+              <a href="https://github.blog" target="_blank" class="li-text blog"
+                >https://github.blog
+              </a>
+            </li>
+            <!-- COMPANY LI -->
+            <li class="li">
+              <img
+                src="./assets/icon-company.svg"
+                alt="location icon"
+                class="li-icon"
+              />
+              <span class="li-text company">@github</span>
+            </li>
+          </ul>
+        </div>
+      </main>
+    </div>
+    <!-- scripts -->
+    <script src="../script.js"></script>
+  </body>
+</html>
