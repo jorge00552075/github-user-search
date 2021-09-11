@@ -91,7 +91,6 @@ searchBtn.addEventListener('click', (e) => {
     return;
   }
   if (input.value.length > 0) errMessage.style.display = 'none';
-
   const username = input.value;
   getUserData(username);
   input.value = '';
