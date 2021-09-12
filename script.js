@@ -6,6 +6,11 @@ const themeBtn = document.querySelector('.theme-btn');
 const input = document.querySelector('.search-input');
 const errMessage = document.querySelector('.err-message');
 const searchBtn = document.querySelector('.btn');
+// LINKS
+const location1 = document.querySelector('.location');
+const twitter = document.querySelector('.twitter_username');
+const blog = document.querySelector('.blog');
+const company = document.querySelector('.company');
 
 // TOGGLE THEME
 function changeTheme(theme) {
@@ -15,6 +20,7 @@ function changeTheme(theme) {
   themeIcon.src =
     theme === 'light' ? './assets/icon-moon.svg' : './assets/icon-sun.svg';
   themeIcon.alt = theme === 'light' ? 'Moon icon' : 'Sun Icon';
+  setGrayColor([location1, twitter, blog, company]);
 }
 /////////////////////////
 
@@ -45,20 +51,16 @@ function setUserData(data) {
   document.querySelector('.followers').textContent = data.followers;
   document.querySelector('.following').textContent = data.following;
 
-  document.querySelector('.location').textContent =
-    data.location ?? 'Not Available';
-  document.querySelector('.twitter_username').textContent =
-    data.twitter_username ?? 'Not Available';
-  document
-    .querySelector('.twitter_username')
-    .setAttribute('href', `${'https://twitter.com/'}${data.twitter_username}`);
-  document.querySelector('.blog').textContent =
-    data.blog === '' ? 'Not Available' : data.blog;
-  document
-    .querySelector('.blog')
-    .setAttribute('href', `${'https://'}${data.blog}`);
-  document.querySelector('.company').textContent =
-    data.company ?? 'Not Available';
+  // LINKS
+  location1.textContent = data.location ?? 'Not Available';
+  twitter.textContent = data.twitter_username ?? 'Not Available';
+  // prettier-ignore
+  twitter.setAttribute('href', `${'https://twitter.com/'}${data.twitter_username}`);
+  blog.textContent = data.blog === '' ? 'Not Available' : data.blog;
+  blog.setAttribute('href', `${'https://'}${data.blog}`);
+  company.textContent = data.company ?? 'Not Available';
+
+  setGrayColor([location1, twitter, blog, company]);
 }
 
 function getJoinedDate(data) {
@@ -67,6 +69,22 @@ function getJoinedDate(data) {
   const year = data.slice(0, 4);
 
   return `Joined ${day} ${month} ${year}`;
+}
+
+function setGrayColor(links) {
+  if (htmlEl.getAttribute('data-theme') === 'dark') {
+    links.forEach((link) => {
+      link.textContent === 'Not Available'
+        ? (link.style.color = '#C4C4C4')
+        : (link.style.color = 'hsl(0, 0%, 100%)');
+    });
+  } else {
+    links.forEach((link) => {
+      link.textContent === 'Not Available'
+        ? (link.style.color = '#C4C4C4')
+        : (link.style.color = 'hsl(218, 35%, 45%)');
+    });
+  }
 }
 
 // INITIAL LOAD

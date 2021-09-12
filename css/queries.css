@@ -42,7 +42,6 @@
   }
 
   .stats-container {
-    width: 100%;
     gap: 20%;
   }
 }
@@ -94,16 +93,8 @@
     font-size: 16px;
   }
 
-  /* Social Links */
   .social-links {
-    flex-direction: column;
-  }
-
-  .li {
-    width: 100%;
-    /* used for aligning li text */
-    display: grid;
-    grid-template-columns: 20px 1fr;
+    grid-template-columns: 1fr;
   }
 
   .link-text {
